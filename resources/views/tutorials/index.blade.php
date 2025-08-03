@@ -3,11 +3,11 @@
 
 
 <ul>
-  @foreach ($tutorials as $tutorial)
+  @foreach ($tutors as $tutor)
        <li>
-        <x-card href="/tutorial/{{ $tutorial['id'] }}" :highlight="$tutorial['duration'] >1">
-          <h3>{{$tutorial["title"]}}</h3>
-          <p>{{$tutorial["tutor"]}}</p>
+        <x-card href="/tutors/{{ $tutor->id }}" :highlight="$tutor->skill >50">
+          <h3>{{$tutor->name}}</h3>
+         
         </x-card>
       </li>
   @endforeach
