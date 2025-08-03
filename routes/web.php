@@ -13,11 +13,11 @@ Route::get('/about', function(){
 
 // wildcats
 
-Route::get('/tutors',[TutorController::class, 'index'] );
+Route::get('/tutors',[TutorController::class, 'index'] )->name('tutors.index');
 
-Route::get("/tutors/{id}", [TutorController::class, 'show']);
+Route::get("/tutors/{id}", [TutorController::class, 'show'])->name('tutors.show');
 
-Route::get('/tutors/create',[TutorController::class, 'create']);
+Route::get('/tutors/create',[TutorController::class, 'create'])->name('tutors.create');
 
 Route::get('/tutorial', function(){
     return view('tutorials.tutorial.index');

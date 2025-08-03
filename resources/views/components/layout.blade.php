@@ -11,8 +11,8 @@
 
 <header>
     <nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
+    <a href="{{ route('tutors.index') }}">All tutors</a>
+    <a href="{{ route('tutors.create') }}">Create tutor</a>
     {{-- <a href="/tutorials/{{$tutors[0]["id"]}}">Tutorial</a>
     <a href="/tutorials/{{$tutors[1]["id"]}}">Tutorial</a> --}}
     </nav>

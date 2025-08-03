@@ -10,7 +10,7 @@ class TutorController extends Controller
     //
 
     public function index(){
-        $tutors=tutor::orderBy('created_at', 'desc')->get();
+        $tutors=tutor::orderBy('created_at', 'desc')->paginate(10);
         return view('tutorials.index', ["tutors"=>$tutors]);
     }
 
