@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\tutorial;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\tutor>
@@ -20,7 +21,9 @@ class TutorFactory extends Factory
             //
             'name'=>fake()->name(),
             'bio'=>fake()->realText(500),
-            'skill'=>fake()->numberBetween(0, 100)
+            'skill'=>fake()->numberBetween(0, 100),
+            'tutorial_id'=>tutorial::inRandomOrder()->first()->id,
+
         ];
     }
 }

@@ -18,6 +18,8 @@ class TutorialFactory extends Factory
     {
         return [
             //
+            'title'=>fake()->sentence(rand(3, 6)),
+            'description'=>fake()->paragraph(10)
         ];
     }
 }
